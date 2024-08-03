@@ -1,5 +1,16 @@
 "use strict"
-// console.log('Hello');
-const result = confirm("Are you here?");
-console.log(result)
-console.log('Hello word')
+
+const numberOfFilms = +prompt('Сколько фильмов вы посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    prifat: false
+};
+const movie = prompt('Один из последних просмотренных фильмов?', '');
+const rating = prompt('На сколько оцените его?', '');
+personalMovieDB.movies[movie] = rating;
+
+console.log(personalMovieDB)
